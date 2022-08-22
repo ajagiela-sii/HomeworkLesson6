@@ -5,14 +5,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class WebsitesTitleTest extends TestBase{
+public class WebsitesTitleTest extends TestBase {
 
     @ParameterizedTest
     @MethodSource("DataProvider#siiData")
     @Tag("regresja")
     @Tag("sii")
     @DisplayName("Checking title for sii.pl")
-    void checkTitleForSii(String expectedTitle){;
+    void checkTitleForSii(String expectedTitle) {
         String actualTitle = getWebsiteTitle("https://www.sii.pl");
         assertThat(actualTitle).isEqualTo(expectedTitle);
     }
@@ -22,7 +22,7 @@ public class WebsitesTitleTest extends TestBase{
     @Tag("regresja")
     @Tag("onet")
     @DisplayName("Checking title for onet.pl")
-    void checkTitleForOnet(String expectedTitle){;
+    void checkTitleForOnet(String expectedTitle) {
         String actualTitle = getWebsiteTitle("https://www.onet.pl");
         assertThat(actualTitle).isEqualTo(expectedTitle);
     }
@@ -32,7 +32,7 @@ public class WebsitesTitleTest extends TestBase{
     @Tag("regresja")
     @Tag("kotuszkowo")
     @DisplayName("Checking title for kotuszkowo.pl")
-    void checkTitleForKotuszkowo(String expectedTitle){;
+    void checkTitleForKotuszkowo(String expectedTitle) {
         String actualTitle = getWebsiteTitle("http://kotuszkowo.pl/");
         assertThat(actualTitle).isEqualTo(expectedTitle);
     }
@@ -42,7 +42,7 @@ public class WebsitesTitleTest extends TestBase{
     @Tag("regresja")
     @Tag("filmweb")
     @DisplayName("Checking title for filmweb.pl")
-    void checkTitleForFilmweb(String expectedTitle){;
+    void checkTitleForFilmweb(String expectedTitle) {
         String actualTitle = getWebsiteTitle("https://www.filmweb.pl/");
         assertThat(actualTitle).isEqualTo(expectedTitle);
     }
@@ -52,7 +52,7 @@ public class WebsitesTitleTest extends TestBase{
     @Tag("regresja")
     @Tag("selenium")
     @DisplayName("Checking title for selenium.dev")
-    void checkTitleForSelenium(String expectedTitle){;
+    void checkTitleForSelenium(String expectedTitle) {
         String actualTitle = getWebsiteTitle("https://www.selenium.dev/documentation/en/webdriver/");
         assertThat(actualTitle).isEqualTo(expectedTitle);
     }

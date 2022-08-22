@@ -13,24 +13,24 @@ public class TestBase {
     WebDriver driver;
 
     @BeforeAll
-    static void setDriver(){
+    static void setDriver() {
         WebDriverManager.chromedriver().setup();
         java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
     }
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
     @AfterEach
-    void tearDown(){
+    void tearDown() {
         driver.quit();
     }
 
-    protected String getWebsiteTitle(String webURL){
+    protected String getWebsiteTitle(String webURL) {
         driver.get(webURL);
         return driver.getTitle();
     }
