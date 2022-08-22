@@ -10,7 +10,7 @@ import java.util.logging.Level;
 
 public class TestBase {
 
-    WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeAll
     static void setDriver() {
