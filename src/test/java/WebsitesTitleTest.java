@@ -44,7 +44,7 @@ public class WebsitesTitleTest extends TestBase {
     void checkTitleForKotuszkowo(WebTitle expectedTitle) {
         logger.info("Starting test " + testInfo.getTestMethod());
         String actualTitle = getWebsiteTitle("http://kotuszkowo.pl/");
-        logger.debug("Kotuszkowo title " + actualTitle);
+        logger.debug("Kotuszkowo title: " + actualTitle);
         assertThat(actualTitle).isEqualTo(expectedTitle.toString());
     }
 
